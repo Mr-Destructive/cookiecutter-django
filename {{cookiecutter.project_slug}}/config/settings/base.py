@@ -46,7 +46,7 @@ DATABASES = {"default": env.db("DATABASE_URL")}
 DATABASES = {
     "default": env.db(
         "DATABASE_URL",
-        default="postgres://{% if cookiecutter.windows == 'y' %}localhost{% endif %}/{{cookiecutter.project_slug}}",
+        default="postgresql://postgres:postgres@localhost:5432/{{cookiecutter.project_slug}}",
     ),
 }
 {%- endif %}
@@ -154,7 +154,6 @@ MIDDLEWARE = [
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
-    "django.middleware.common.BrokenLinkEmailsMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
