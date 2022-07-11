@@ -1,3 +1,10 @@
-# This file is expected by Heroku.
-
--r requirements/production.txt
+asgiref
+Django
+gunicorn
+python-environ
+sqlparse
+whitenoise
+djangorestframework
+django-allauth
+django-crispy-forms
+crispy-bootstrap5

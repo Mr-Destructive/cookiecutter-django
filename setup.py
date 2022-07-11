@@ -18,9 +18,9 @@ setup(
         "Django projects quickly."
     ),
     long_description=long_description,
-    author="Daniel Roy Greenfeld",
-    author_email="pydanny@gmail.com",
-    url="https://github.com/cookiecutter/cookiecutter-django",
+    author="Meet Rajesh Gor",
+    author_email="gormeet711@gmail.com",
+    url="https://github.com/mr-destructive/cookiecutter-django",
     packages=[],
     license="BSD",
     zip_safe=False,
