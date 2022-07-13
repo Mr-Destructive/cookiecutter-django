@@ -96,7 +96,7 @@ WSGI_APPLICATION = '{{cookiecutter.project_slug}}.wsgi.application'
 
 DATABASES = {
         "default": env.db( "DATABASE_URL",
-        default="postgres://{% if cookiecutter.windows == 'y' %}localhost{% endif %}/{{cookiecutter.project_slug}}",
+            default="postgres://postgres:postgres@localhost:5432/{{cookiecutter.project_slug}}",
     ),
 }
 
