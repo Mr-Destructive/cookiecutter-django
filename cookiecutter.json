@@ -6,6 +6,7 @@
     "domain_name": "example.com",
     "email": "{{ cookiecutter.author_name.lower()|replace(' ', '-') }}@example.com",
     "version": "0.0.1",
+    "use_postgres": "n",
     "use_drf": "n",
     "use_whitenoise": "n",
     "use_heroku": "n",

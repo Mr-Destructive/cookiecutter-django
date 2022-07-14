@@ -71,8 +71,25 @@ def set_django_secret_key(file_path):
 def set_flags_in_settings_files():
     set_django_secret_key(os.path.join("{{cookiecutter.project_slug}}", "settings.py"))
 
+def create_postgres_db():
+    if "{{ cookiecutter.use_postgres }}" == 'y':
+        import psycopg2
+
+        conn = psycopg2.connect(
+           database="postgres", user='postgres', password='password', host='127.0.0.1', port= '5432')
+        conn.autocommit = True
+        cursor = conn.cursor()
+
+        sql = '''CREATE database {{ cookiecutter.project_slug }}''';
+
+        cursor.execute(sql)
+        print("Database created successfully........")
+
+        conn.close()
+
 def main():
     set_flags_in_settings_files()
+    create_postgres_db()
     print(SUCCESS + "Project initialized, keep up the good work!")
 
 if __name__ == "__main__":
